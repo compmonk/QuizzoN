@@ -1,0 +1,519 @@
+{
+	"info": {
+		"_postman_id": "27af8aa9-727b-4b21-94e3-908a66e486de",
+		"name": "QuizzoN",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Signup User",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"email\": \"test10@example.com\",\n    \"password\": \"password\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/signup",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"signup"
+					]
+				},
+				"description": "Signup User with `email` and `password`"
+			},
+			"response": [
+				{
+					"name": "Signup User",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"email\": \"test10@example.com\",\n    \"password\": \"password\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/api/signup",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"signup"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "109"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"6d-W+IANLRad6o4dnRAkCepTR25b+Y\""
+						},
+						{
+							"key": "Set-Cookie",
+							"value": "AuthCookie=s%3A62133b2827e86405c66c14bf.kvTqenklyvSPylqtHm%2FRg6SXXuJ52ZG%2FyR6%2F%2BA7E0J0; Path=/; HttpOnly"
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 21 Feb 2022 07:11:36 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"_id\": \"62133b2827e86405c66c14c0\",\n    \"email\": \"test10@example.com\",\n    \"questionsPlayed\": 0,\n    \"correctAnswer\": 0,\n    \"__v\": 0\n}"
+				}
+			]
+		},
+		{
+			"name": "Login User",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"email\": \"test10@example.com\",\n    \"password\": \"password\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"login"
+					]
+				},
+				"description": "Login user with `email` and `password`"
+			},
+			"response": [
+				{
+					"name": "Login User",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"email\": \"test10@example.com\",\n    \"password\": \"password\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/api/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"login"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "110"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"6e-o6ft6z9HIBMqdrkjCJba1QEOk1k\""
+						},
+						{
+							"key": "Set-Cookie",
+							"value": "AuthCookie=s%3A621381629653574130ef865a.RVslJntFq%2F3bKwk6aKXLSsmNbYBpyk4WWbkomBAYlL8; Path=/; HttpOnly"
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 21 Feb 2022 12:11:14 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"_id\": \"62133b2827e86405c66c14c0\",\n    \"email\": \"test10@example.com\",\n    \"questionsPlayed\": 13,\n    \"correctAnswer\": 6,\n    \"__v\": 0\n}"
+				}
+			]
+		},
+		{
+			"name": "Logout User",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5000/api/logout",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"logout"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Logout User",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/api/logout",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"logout"
+							]
+						}
+					},
+					"status": "No Content",
+					"code": 204,
+					"_postman_previewlanguage": "plain",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 21 Feb 2022 09:31:59 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": null
+				}
+			]
+		},
+		{
+			"name": "Get Question",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5000/api/user/question",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"user",
+						"question"
+					]
+				},
+				"description": "Get latest question for the signed in user"
+			},
+			"response": [
+				{
+					"name": "Get Question",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/api/user/question",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"user",
+								"question"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "396"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"18c-5/y7/8N/WCURQDDX718JBP7hYm0\""
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 21 Feb 2022 11:46:03 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"_id\": 12,\n    \"questionText\": \"Habeas Corpus Act 1679\",\n    \"optionA\": \"provided facilities to a prisoner to obtain either speedy trial or release in bail\",\n    \"optionB\": \"states that no one was to be imprisoned without a writ or warrant stating the charge against him\",\n    \"optionC\": \"safeguarded the personal liberties of the people against arbitrary imprisonment by the king's orders\",\n    \"optionD\": \"All of the above\"\n}"
+				}
+			]
+		},
+		{
+			"name": "Check answer",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"answer\": \"All of the above\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/user/question",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"user",
+						"question"
+					]
+				},
+				"description": "Check answer for the current question by posting `answer` as a JSON payload"
+			},
+			"response": [
+				{
+					"name": "Check answer",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"answer\": \"All of the above\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/api/user/question",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"user",
+								"question"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "896"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"380-WcV0J+GlNkBeQkmF46zpc1nZRxw\""
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 21 Feb 2022 11:46:11 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"correct\": true,\n    \"question\": {\n        \"_id\": 12,\n        \"questionText\": \"Habeas Corpus Act 1679\",\n        \"optionA\": \"provided facilities to a prisoner to obtain either speedy trial or release in bail\",\n        \"optionB\": \"states that no one was to be imprisoned without a writ or warrant stating the charge against him\",\n        \"optionC\": \"safeguarded the personal liberties of the people against arbitrary imprisonment by the king's orders\",\n        \"optionD\": \"All of the above\",\n        \"answer\": \"All of the above\",\n        \"explanation\": \"Habeas Corpus Act 1679 provided facilities to a prisoner to obtain either speedy trial or release in bail, states that no one was to be imprisoned without a writ or warrant stating the charge against him and safeguarded the personal liberties of the people against arbitrary imprisonment by the king's orders.\"\n    },\n    \"user\": {\n        \"_id\": \"62133b2827e86405c66c14c0\",\n        \"email\": \"test10@example.com\",\n        \"questionsPlayed\": 13,\n        \"correctAnswer\": 6,\n        \"__v\": 0\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "Get Leaderboard",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5000/api/user/leaderboard",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"user",
+						"leaderboard"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Get Leaderboard",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/api/user/leaderboard",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"user",
+								"leaderboard"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "1089"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"441-Uqef/siaQBBnvI3w4C9DTmQiVi4\""
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 21 Feb 2022 12:11:18 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"_id\": \"62133b2827e86405c66c14c0\",\n        \"email\": \"test10@example.com\",\n        \"questionsPlayed\": 13,\n        \"correctAnswer\": 6,\n        \"__v\": 0,\n        \"total\": 46.15384615384615\n    },\n    {\n        \"_id\": \"6212817be53d27427a44f9dd\",\n        \"email\": \"test@example.com\",\n        \"questionsPlayed\": 0,\n        \"correctAnswer\": 0,\n        \"__v\": 0,\n        \"total\": 0\n    },\n    {\n        \"_id\": \"621282d399567368c2d1b408\",\n        \"email\": \"test1@example.com\",\n        \"questionsPlayed\": 0,\n        \"correctAnswer\": 0,\n        \"__v\": 0,\n        \"total\": 0\n    },\n    {\n        \"_id\": \"621282f999567368c2d1b40a\",\n        \"email\": \"test2@example.com\",\n        \"questionsPlayed\": 0,\n        \"correctAnswer\": 0,\n        \"__v\": 0,\n        \"total\": 0\n    },\n    {\n        \"_id\": \"6212832d7309f09b08267391\",\n        \"email\": \"test3@example.com\",\n        \"questionsPlayed\": 0,\n        \"correctAnswer\": 0,\n        \"__v\": 0,\n        \"total\": 0\n    },\n    {\n        \"_id\": \"621283648f1c051188e1cb3c\",\n        \"email\": \"test4@example.com\",\n        \"questionsPlayed\": 0,\n        \"correctAnswer\": 0,\n        \"__v\": 0,\n        \"total\": 0\n    },\n    {\n        \"_id\": \"62129054b3289c2130930f17\",\n        \"email\": \"test6@example.com\",\n        \"questionsPlayed\": 0,\n        \"correctAnswer\": 0,\n        \"__v\": 0,\n        \"total\": 0\n    },\n    {\n        \"_id\": \"621321bb9e01186a661b2c99\",\n        \"email\": \"test8@example.com\",\n        \"questionsPlayed\": 0,\n        \"correctAnswer\": 0,\n        \"__v\": 0,\n        \"total\": 0\n    },\n    {\n        \"_id\": \"62133ab6d71c63650386a5e7\",\n        \"email\": \"test7@example.com\",\n        \"questionsPlayed\": 0,\n        \"correctAnswer\": 0,\n        \"__v\": 0,\n        \"total\": 0\n    }\n]"
+				}
+			]
+		}
+	]
+}
