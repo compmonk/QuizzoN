@@ -12,7 +12,6 @@ function SignUp() {
         cookies,
         setCookies
     } = useContext(AuthContext);
-    const [currencies, setCurrencies] = useState([])
     const navigate = useNavigate()
 
 
