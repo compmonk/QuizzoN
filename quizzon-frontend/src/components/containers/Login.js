@@ -1,7 +1,10 @@
 import React, { useState } from "react";
 import Form from "react-bootstrap/Form";
 import Button from "react-bootstrap/Button";
-import "../App.css";
+import "../../App.css";
+import axios from 'axios';
+import { AuthContext } from "../auth/AuthContext";
+import { Redirect } from "react-router-dom";
 
 export default function Login() {
   const [email, setEmail] = useState("");
@@ -13,6 +16,29 @@ export default function Login() {
 
   function handleSubmit(event) {
     event.preventDefault();
+    //make service call here for login 
+    loginCall();
+
+  }
+
+  const loginCall = () => {
+    fetch('/api/login', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({
+        "email": "test01@example.com",
+        "password": "password"
+      }),
+    })
+      .then((res) => res.json())
+      .then((result) => console.log(result)
+        //go to the game page 
+
+
+      )
+      .catch((err) => console.log('error'))
   }
 
   return (

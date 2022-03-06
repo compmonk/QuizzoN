@@ -8,10 +8,14 @@ import {
   Route,
 } from "react-router-dom";
 import reportWebVitals from './reportWebVitals';
-import Question from './containers/Question';
-import Login from './containers/Login';
-import Register from './containers/Register';
-import Leaderboard from './containers/Leaderboard';
+import Question from './components/containers/Question';
+import Login from './components/containers/Login';
+import Register from './components/containers/Register';
+import Leaderboard from './components/containers/Leaderboard';
+import Game from './components/containers/Game';
+import SignIn from './components/containers/user/SignIn';
+import SignUp from './components/containers/user/SignUp';
+
 
 const rootElement = document.getElementById("root");
 
@@ -19,9 +23,11 @@ ReactDOM.render(
   <BrowserRouter>
     <Routes>
       <Route path="/" element={<App />} />
-      <Route path="login" element={<Login />} />
-      <Route path="register" element={<Register />} />
+      <Route path="login" element={<SignIn />} />
+      <Route path="register" element={<SignUp />} />
       <Route path="leaderboard" element={<Leaderboard />} />
+      <Route path="game" element={<Game />} />
+
 
     </Routes>
   </BrowserRouter>,

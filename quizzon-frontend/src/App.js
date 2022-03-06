@@ -1,8 +1,8 @@
 import logo from './logo.svg';
 import './App.css';
-import Login from './containers/Login';
-import Register from './containers/Register';
-import Tests from './containers/Question';
+import Login from './components/containers/Login';
+import Register from './components/containers/Register';
+import Tests from './components/containers/Question';
 import { Link } from "react-router-dom";
 
 
@@ -11,10 +11,10 @@ function App() {
     <div className="App">
       <header className="App-header">
         <p>
-          Welcome to Quizzo 
+          Welcome to Quizzo
         </p>
 
-    
+
       </header>
 
       <nav
@@ -25,7 +25,8 @@ function App() {
       >
         <Link to="/login">Login</Link> |{" "}
         <Link to="/register">Register</Link> |{" "}
-        <Link to="/leaderboard">Leaderboard</Link>
+        <Link to="/leaderboard">Leaderboard</Link> |{" "}
+        <Link to="/game">Game</Link>
 
       </nav>
     </div>
