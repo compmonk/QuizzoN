@@ -9,8 +9,6 @@ import {
 } from "react-router-dom";
 import reportWebVitals from './reportWebVitals';
 import Question from './components/containers/Question';
-import Login from './components/containers/Login';
-import Register from './components/containers/Register';
 import Leaderboard from './components/containers/Leaderboard';
 import Game from './components/containers/Game';
 import SignIn from './components/containers/user/SignIn';
