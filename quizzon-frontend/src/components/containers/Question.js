@@ -2,12 +2,12 @@ import React, { useState } from "react";
 import Form from "react-bootstrap/Form";
 import Button from "react-bootstrap/Button";
 import "../../App.css";
-import axios from 'axios';
+import axios from "axios";
+import { Link } from "react-router-dom";
 
-
-export default function Question(props ) {
+export default function Question(props) {
   const [selectedOption, setSelectedOption] = useState(props.data.optionA);
-
+  const [data, setData] = useState({});
 
   const handleOptionChange = async (e) => {
     setSelectedOption(e.target.value);
@@ -15,24 +15,27 @@ export default function Question(props ) {
 
   const onSubmit = async (e) => {
     e.preventDefault();
-    console.log('You have selected:', selectedOption);
+    console.log("You have selected:", selectedOption);
 
     const answerData = {
-      "answer": selectedOption
-  }
-  const { data } = await axios.post("/api/user/question", answerData)
+      answer: selectedOption,
+    };
+    const { data } = await axios.post("/api/user/question", answerData);
 
-  console.log(data);
-  props.sendDataToParent(data.correct);
+    console.log(data);
+    setData(data);
 
+    if (data.correct) {
+    }
   };
 
   return (
-    <form onSubmit={onSubmit}>
+    <form onSubmit={onSubmit} key="reloadKey">
       <div className="question">
-        <tr>
-          <p>{props.data.questionText} </p>
-        </tr>
+       
+          <h2>{props.data.questionText} </h2>
+        
+        <table>
         <tbody>
           <div className="radio-btn">
             <tr>
@@ -81,11 +84,32 @@ export default function Question(props ) {
             </tr>
           </div>
         </tbody>
-
-        <button className="btn btn-default" type="submit">
-          Save
-        </button>
+        </table>
+        {data.question ? (
+          <Button  type="button" onClick={() => window.location.reload()}>
+            Next
+          </Button>
+        ) : (
+          <button className="btn btn-default" type="submit">
+            Submit
+          </button>
+        )}
       </div>
+
+      {data.question ? (
+        <div>
+          {data.correct ? (
+            <p>Correct!!!!</p>
+          ) : (
+            <div>
+              <p>Wrong !!!!</p>
+              <p> The correct answer is : {data.question?.answer}</p>
+            </div>
+          )}
+
+          <p>Explanation : {data.question?.explanation}</p>
+        </div>
+      ) : null}
     </form>
   );
 }

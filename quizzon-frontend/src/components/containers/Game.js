@@ -12,7 +12,7 @@ function Game(props) {
 
   const [loadingData, setLoadingData] = useState(true);
   const [data, setData] = useState({});
-  const [isCorrect, setIsCorrect] = useState("false")
+  const [isCorrect, setIsCorrect] = useState("false");
 
   React.useEffect(() => {
     async function getData() {
@@ -30,23 +30,12 @@ function Game(props) {
     }
   }, []);
 
-
-
-  const sendDataToParent = (correctFlag) => { 
-    setIsCorrect(correctFlag)
-    console.log("correctFlag", correctFlag, isCorrect);
-
-    // show on page the answer and explanation 
-
-    //show next button
-  };
-
   return (
     <div>
       {loadingData ? (
         <p>Loading Please wait...</p>
       ) : (
-        <Question data={data} sendDataToParent={sendDataToParent}></Question>
+        <Question data={data}></Question>
       )}
     </div>
   );

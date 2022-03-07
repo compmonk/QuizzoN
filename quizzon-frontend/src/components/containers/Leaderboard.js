@@ -28,32 +28,29 @@ export default function Leaderboard() {
     <div className="App">
       <Table>
         <thead>
-          <th>ID</th>
           <th>Email</th>
           <th>Questions Played</th>
           <th>Correct Answer</th>
-          <th>V</th>
           <th>Total</th>
         </thead>
+    <tbody>
 
+    
         {loadingData ? (
           <p>Loading Please wait...</p>
         ) : (
           data.map((entry) => {
             return (
-              <tbody>
                 <tr>
-                  <td>{entry._id}</td>
                   <td>{entry.email}</td>
                   <td>{entry.questionsPlayed}</td>
                   <td>{entry.correctAnswer}</td>
-                  <td>{entry.__v}</td>
                   <td>{entry.total}</td>
                 </tr>
-              </tbody>
             );
           })
         )}
+        </tbody>
       </Table>
     </div>
   );
