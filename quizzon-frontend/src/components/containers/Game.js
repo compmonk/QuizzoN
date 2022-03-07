@@ -12,6 +12,7 @@ function Game(props) {
 
   const [loadingData, setLoadingData] = useState(true);
   const [data, setData] = useState({});
+  const [isCorrect, setIsCorrect] = useState("false")
 
   React.useEffect(() => {
     async function getData() {
@@ -29,19 +30,15 @@ function Game(props) {
     }
   }, []);
 
-  const onSubmit = async (e) => {
-    e.preventDefault();
-    const { email, password } = e.target.elements;
-    const user = {
-      email: email.value,
-      password: password.value,
-    };
-    const { data } = await axios.post("/api/login", user, {
-      withCredentials: true,
-      headers: cookies,
-    });
-    setCurrentUser(data);
-    setCookies(document.cookie);
+
+
+  const sendDataToParent = (correctFlag) => { 
+    setIsCorrect(correctFlag)
+    console.log("correctFlag", correctFlag, isCorrect);
+
+    // show on page the answer and explanation 
+
+    //show next button
   };
 
   return (
@@ -49,7 +46,7 @@ function Game(props) {
       {loadingData ? (
         <p>Loading Please wait...</p>
       ) : (
-        <Question data={data}></Question>
+        <Question data={data} sendDataToParent={sendDataToParent}></Question>
       )}
     </div>
   );

@@ -5,8 +5,9 @@ import "../../App.css";
 import axios from 'axios';
 
 
-export default function Question(props) {
+export default function Question(props ) {
   const [selectedOption, setSelectedOption] = useState(props.data.optionA);
+
 
   const handleOptionChange = async (e) => {
     setSelectedOption(e.target.value);
@@ -21,7 +22,9 @@ export default function Question(props) {
   }
   const { data } = await axios.post("/api/user/question", answerData)
 
-  console.log(data)
+  console.log(data);
+  props.sendDataToParent(data.correct);
+
   };
 
   return (
