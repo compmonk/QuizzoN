@@ -49,7 +49,7 @@ function Game(props) {
       {loadingData ? (
         <p>Loading Please wait...</p>
       ) : (
-        <Question question="yeh mera question" data={data}></Question>
+        <Question data={data}></Question>
       )}
     </div>
   );
