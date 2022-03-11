@@ -2,8 +2,6 @@ import React, { useState, useEffect } from "react";
 import Table from "react-bootstrap/Table";
 import axios from "axios";
 
-import "../../App.css";
-
 export default function Leaderboard() {
   const [loadingData, setLoadingData] = useState(true);
   const [data, setData] = useState({});
