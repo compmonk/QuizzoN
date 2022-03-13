@@ -1,25 +1,15 @@
-import React, {useState, useEffect} from 'react';
-import axios from 'axios';
+import React, {useState} from 'react';
 
 import {AuthContext} from "./AuthContext";
+import {Loading} from "../components/Loading";
 
 
 export const AuthProvider = ({children}) => {
     const [currentUser, setCurrentUser] = useState(null);
     const [loadingUser, setLoadingUser] = useState(false);
-    const [cookies, setCookies] = useState("");
-
-    useEffect(() => {
-        async function fetchData() {
-            const {data} = await axios.get("/api/user/detail")
-            setCurrentUser(data)
-        }
-
-        fetchData()
-    }, []);
 
     if (loadingUser) {
-        return <div>Loading....</div>;
+        return <Loading />;
     }
 
     return <AuthContext.Provider value={{
@@ -27,7 +17,5 @@ export const AuthProvider = ({children}) => {
         setCurrentUser,
         loadingUser,
         setLoadingUser,
-        cookies,
-        setCookies
     }}>{children}</AuthContext.Provider>;
 };
