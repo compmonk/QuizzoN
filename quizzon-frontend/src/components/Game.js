@@ -11,7 +11,6 @@ function Game() {
     const [answer, setAnswer] = useState("")
     const [questionId, setQuestionId] = useState(currentUser?.questionsPlayed)
     const [loadingData, setLoadingData] = useState(true);
-    const [isCorrect, setIsCorrect] = useState("false");
 
 
     useEffect(() => {
@@ -58,7 +57,13 @@ function Game() {
                                             label={currentQuestion.optionA}
                                             onChange={selectAnswer}
                                             value={currentQuestion.optionA}
-                                            checked={answer === currentQuestion.optionA}/>
+                                            checked={answer === currentQuestion.optionA}
+                                            className={
+                                                currentQuestion.answer && currentQuestion.optionA === answer ?
+                                                    (currentQuestion.answer === currentQuestion.optionA ? "correct-answer" : "incorrect-answer") :
+                                                    (currentQuestion.answer === currentQuestion.optionA ? "correct-answer" : "disabled")
+                                            }
+                                />
                             </Form.Group>
 
                             <Form.Group as={Col} className="mb-3">
@@ -66,7 +71,13 @@ function Game() {
                                             label={currentQuestion.optionB}
                                             onChange={selectAnswer}
                                             value={currentQuestion.optionB}
-                                            checked={answer === currentQuestion.optionB}/>
+                                            checked={answer === currentQuestion.optionB}
+                                            className={
+                                                currentQuestion.answer && currentQuestion.optionB === answer ?
+                                                    (currentQuestion.answer === currentQuestion.optionB ? "correct-answer" : "incorrect-answer") :
+                                                    (currentQuestion.answer === currentQuestion.optionB ? "correct-answer" : "")
+                                            }
+                                />
                             </Form.Group>
 
                             <Form.Group as={Col} className="mb-3">
@@ -74,7 +85,13 @@ function Game() {
                                             label={currentQuestion.optionC}
                                             onChange={selectAnswer}
                                             value={currentQuestion.optionC}
-                                            checked={answer === currentQuestion.optionC}/>
+                                            checked={answer === currentQuestion.optionC}
+                                            className={
+                                                currentQuestion.answer && currentQuestion.optionC === answer ?
+                                                    (currentQuestion.answer === currentQuestion.optionC ? "correct-answer" : "incorrect-answer") :
+                                                    (currentQuestion.answer === currentQuestion.optionC ? "correct-answer" : "")
+                                            }
+                                />
                             </Form.Group>
 
                             <Form.Group as={Col} className="mb-3">
@@ -82,7 +99,13 @@ function Game() {
                                             label={currentQuestion.optionD}
                                             onChange={selectAnswer}
                                             value={currentQuestion.optionD}
-                                            checked={answer === currentQuestion.optionD}/>
+                                            checked={answer === currentQuestion.optionD}
+                                            className={
+                                                currentQuestion.answer && currentQuestion.optionD === answer ?
+                                                    (currentQuestion.answer === currentQuestion.optionD ? "correct-answer" : "incorrect-answer") :
+                                                    (currentQuestion.answer === currentQuestion.optionD ? "correct-answer" : "")
+                                            }
+                                />
                             </Form.Group>
 
                             <Form.Group as={Col} className="mb-3">
