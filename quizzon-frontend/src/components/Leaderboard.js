@@ -30,15 +30,17 @@ export default function Leaderboard() {
                         <h1>Leaderboard</h1>
                         <Table striped bordered hover>
                             <thead>
-                            <th>Email</th>
-                            <th>Questions Played</th>
-                            <th>Correct Answer</th>
-                            <th>Total</th>
+                            <tr>
+                                <th>Email</th>
+                                <th>Questions Played</th>
+                                <th>Correct Answer</th>
+                                <th>Total</th>
+                            </tr>
                             </thead>
                             <tbody>
 
                             {data.map((entry) => (
-                                <tr>
+                                <tr key={entry._id}>
                                     <td>{entry.email}</td>
                                     <td>{entry.questionsPlayed}</td>
                                     <td>{entry.correctAnswer}</td>
