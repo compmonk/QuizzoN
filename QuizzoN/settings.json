@@ -1,6 +1,7 @@
 {
   "mongoConfig": {
-    "serverUrl": "mongodb://localhost:27017/",
+    "serverUrl": "mongodb+srv://quizzo-db-user:c9xdU4CrCBS7wBn@cluster0.7z5bn.mongodb.net/myFirstDatabase?retryWrites=true&w=majority",
+    "serverUrlLocal": "mongodb://localhost:27017/",
     "database": "quizzon"
   },
   "secret": "meetmeatthetogaparty"
