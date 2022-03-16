@@ -15,7 +15,6 @@ function SignOut() {
     useEffect(() => {
         axios.get("/api/logout", {withCredentials: true, headers: document.cookie}).then((response) => {
             setCurrentUser(null)
-            // document.cookie = 'AuthCookie=; Path=/; Expires=Thu, 01 Jan 1970 00:00:01 GMT;'
             navigate("/")
             setIsLoading(false)
         })

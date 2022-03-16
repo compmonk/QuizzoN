@@ -120,41 +120,12 @@ async function updateScoreById(userId, questionsPlayed, correctAnswer) {
     error.http_code = 200;
     const errors = {};
 
-    try {
-        let user = await userModel.findByIdAndUpdate(userId, {
-            questionsPlayed: questionsPlayed,
-            correctAnswer: correctAnswer
-        }, {new: true})
-
-        if (user === null) {
-            errors["id"] = `user with id ${userId} doesn't exists`;
-            error.http_code = 404;
-            error.message = JSON.stringify({
-                errors: errors,
-            });
-            throw error;
-        }
-        user = user._doc
-        delete user["password"]
-        return user
-    } catch (e) {
-        throw e
-    }
+    // get the user and update the questionsPlayed and correctAnswer
 }
 
 async function getScores() {
-    try {
-        let scores = await userModel.find({}, {password: false}).sort({correctAnswer: -1, questionsPlayed: -1})
-        scores = scores.map(score => {
-            return {
-                ...score._doc,
-                total: score.correctAnswer / Math.max(score.questionsPlayed, 1) * 100,
-            }
-        })
-        return scores
-    } catch (e) {
-        throw e
-    }
+
+    // get scores for all users
 }
 
 module.exports = {

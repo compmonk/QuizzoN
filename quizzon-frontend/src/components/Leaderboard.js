@@ -39,14 +39,7 @@ export default function Leaderboard() {
                             </thead>
                             <tbody>
 
-                            {data.map((entry) => (
-                                <tr key={entry._id}>
-                                    <td>{entry.email}</td>
-                                    <td>{entry.questionsPlayed}</td>
-                                    <td>{entry.correctAnswer}</td>
-                                    <td>{entry.total}</td>
-                                </tr>
-                            ))}
+                            {/* map over the data to display the rows */}
 
                             </tbody>
                         </Table>

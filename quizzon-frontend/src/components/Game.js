@@ -34,13 +34,7 @@ function Game() {
     }
 
     const submitAnswer = async (event) => {
-        event.preventDefault()
-        const {data} = await axios.post("/api/user/question", {answer}, {
-            withCredentials: true,
-            headers: document.cookie
-        })
-        setCurrentUser(data.user)
-        setCurrentQuestion(data.question)
+        // post the answer, get the response
     }
 
     return (
@@ -114,7 +108,7 @@ function Game() {
 
                             <Form.Group as={Col} className="mb-3">
                                 {currentQuestion.answer ?
-                                    <Button onClick={() => setQuestionId(currentUser.questionsPlayed)}>Next</Button> :
+                                    <Button >Next</Button> :
                                     <Button type="submit">Submit</Button>}
                             </Form.Group>
 

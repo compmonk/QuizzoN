@@ -61,5 +61,5 @@ const UserNavigation = ({user}) => {
 export const Navigation = () => {
     const {currentUser} = useContext(AuthContext);
 
-    return (currentUser ? <UserNavigation user={currentUser}/> : <GuestNavigation/>);
+    // check for user and return UserNavigation and GuestNavigation
 };

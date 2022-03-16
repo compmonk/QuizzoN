@@ -31,24 +31,7 @@ function SignIn() {
         <Container>
             <Row className="justify-content-md-center">
                 <Col md={4} xl={4} lg={4}>
-                    <Form className="form" onSubmit={onSubmit}>
-                        <h2>Login</h2>
-                        <Form.Group as={Col} className="mb-3">
-                            <Form.Label>Email</Form.Label>
-                            <Form.Control name="email" type="email" placeholder="johndoe@example.com"/>
-                        </Form.Group>
-
-                        <Form.Group as={Col} className="mb-3">
-                            <Form.Label>Password</Form.Label>
-                            <Form.Control name="password" type="password" placeholder="S3cR3t"/>
-                        </Form.Group>
-
-                        {/*<Form.Group as={Col} controlId="formGridSignIn">*/}
-                        <Button variant="primary" type="submit">
-                            Login
-                        </Button>
-                        {/*</Form.Group>*/}
-                    </Form>
+                    {/* Add the form to signin */}
                 </Col>
             </Row>
         </Container>

@@ -25,7 +25,6 @@ function App() {
                     <Route exact path='/leaderboard' element={<PrivateRoute/>}>
                         <Route exact path='/leaderboard' element={<Leaderboard/>}/>
                     </Route>
-                    {/*<PrivateRoute path="/leaderboard" element={<Leaderboard/>}/>*/}
                     <Route path="*" element={<Navigate to="/"/>}/>
                 </Routes>
             </Router>
